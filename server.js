@@ -11,6 +11,9 @@ const animeRoutes = require("./routes/animeRoutes");
 const topicRoutes = require("./routes/topicRoutes");
 const commentRoutes = require("./routes/commentRoutes");
 const userRoutes = require("./routes/userRoutes");
+const newsRoutes = require("./routes/newsRoutes");
+const watchlistRoutes = require("./routes/watchlistRoutes");
+const reportRoutes = require("./routes/reportsRoutes");
 
 dotenv.config();
 
@@ -38,6 +41,9 @@ app.use("/api/topics", topicRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/catalog", animeRoutes);
+app.use("/api/news", newsRoutes);
+app.use("/api/watchlist", watchlistRoutes);
+app.use("/api/reports", reportRoutes);
 
 app.listen(PORT, () => {
   console.log("Server is running!");

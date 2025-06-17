@@ -4,13 +4,10 @@ const validateAccessToken = require("../middlewares/validateAccessToken");
 
 const router = express.Router();
 
-router.put('/watch/:animeId', validateAccessToken, userController.addWatchedAnime);
-
 router.get("/:username", userController.getUserProfile);
 router.get("/:username/comments", userController.getUserComments);
 router.get("/:username/following", userController.getUserFollowing);
 router.get("/:username/followers", userController.getUserFollowers);
-router.get("/:username/watched", userController.getWatchedAnimeList);
 router.put(
   "/:username/follow",
   validateAccessToken,

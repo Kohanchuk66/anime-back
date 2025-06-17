@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post("/", validateAccessToken, commentController.addComment);
 router.get("/helpers", commentController.getTopHelpers);
-router.get("/:id", commentController.getComments);
+router.get("/:id", commentController.getTopicComments);
 router.post(
   "/:id/upvote",
   validateAccessToken,
